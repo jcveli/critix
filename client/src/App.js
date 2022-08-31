@@ -1,26 +1,25 @@
 import {useState, useEffect} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './app.css'
+
+import MovieCard from './components/movie-card/movie-card.component'
 
 
-function App() {
+const BACK_URL = 'http://localhost:5000/'
 
-  const [backendData, setBackendData] = useState([{}])
-
-  useEffect( () => { 
-    fetch('https://imdb-api.com/en/API/Search/k_6l3v0p2m/inception%202010')
-      .then(response => response.json())
-      .then(
-        data => {
-          setBackendData(data)
-        }
-      )
-  })
+const App = () => {
 
   return(
-    <div>
-
+    <div className='container body'>
+		<div className='row row-cols-4'>
+			<MovieCard />
+			<MovieCard />
+			<MovieCard />
+		</div>
     </div>
   )
 
 }
+
 
 export default App;
