@@ -1,22 +1,34 @@
 import {useState, useEffect} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Route, Routes} from 'react-router';
 import './app.css'
+import NavBar from './components/navbar/navbar.component';
+import Home from './routes/home/home.component';
+import Profile from './routes/profile/profile.component';
+import Search from './routes/search/search.component';
 
-import MovieCard from './components/movie-card/movie-card.component'
-
-
-const BACK_URL = 'http://localhost:5000/'
+//const BACK_URL = 'http://localhost:5000/'
 
 const App = () => {
+	const [nowPlayingMovies, setNowPlayingMovies] = useState([]); 
 
+	useEffect( () => {
+		fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=ee286269210313ba6837f031ee41efd2&include_adult=false`)
+		.then((response) => response.json())
+		.then((data) => setNowPlayingMovies(data))
+		.catch((err) => {
+			console.log(err); 
+		})
+	}, []);
+
+	console.log(nowPlayingMovies);
   return(
-    <div className='container body'>
-		<div className='row row-cols-4'>
-			<MovieCard />
-			<MovieCard />
-			<MovieCard />
-		</div>
-    </div>
+    <Routes>
+		<Route path='/' element={<NavBar />}>
+			<Route index element={<Home />} />
+			<Route path='search' element={<Search />} />
+			<Route path='profile' element={<Profile />} />
+		</Route>
+	</Routes>
   )
 
 }
