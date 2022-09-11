@@ -1,0 +1,30 @@
+.footer-container {
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    width: 100%;
+    color:white;
+    height: 45px;
+    background-color: #13172e;
+
+
+    .credit, db-logo {
+        margin-top: 10px;
+    }
+
+    .credit {
+        float:left;
+
+    }
+
+    .db-logo {
+        float:right;
+
+
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

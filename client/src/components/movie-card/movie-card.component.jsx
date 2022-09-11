@@ -1,16 +1,19 @@
 import {Card} from 'react-bootstrap';
-//import Movie from '../movie/movie.component'
+import './movie-card.styles.scss'
+import { img_300 } from '../../config';
 
-import './movie-card.styles.css'
 
 const MovieCard = ({movie}) => {
-    const {id, name} = movie
-    console.log(name);
+    const {title} = movie;
     return(
-        <div className='movie-card-container'>
-          <h2>{movie.title}</h2>  
-        </div>
+      <Card className='card'>
+        <Card.Img variant="top" src={`${img_300}${movie.poster_path}`} />
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+        </Card.Body>
+      </Card>
     )
+    
 }
 
 export default MovieCard; 

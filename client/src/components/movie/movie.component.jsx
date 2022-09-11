@@ -1,12 +1,17 @@
-import { Button } from 'react-bootstrap';
-import './movie.styles.css'
 
-const Movie = () => {
+import MovieCard from '../movie-card/movie-card.component';
+import './movie.styles.scss'
+
+const Movie = ({movies}) => {
     return(
-        <div className='movie'>
-            <p>Movie Poster</p>
-            <p>Movie Name</p>
-            <p>Movie details</p>
+        <div className='movie-container'>
+            {movies.map((movie) => {
+                return(
+                    <MovieCard key={movie.id} movie={movie} />
+                )
+            })
+            
+            }
         </div>
     )
 }
