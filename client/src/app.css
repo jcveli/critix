@@ -1,4 +1,6 @@
 .App {
-    background-color: #1e2742;
+    background-color: #2A2726;
     text-align: center;
+    color: white;
+    overflow: auto;
 }

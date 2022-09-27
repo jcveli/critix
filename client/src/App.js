@@ -4,21 +4,25 @@ import NavBar from './components/navbar/navbar.component';
 import Home from './routes/home/home.component';
 import Profile from './routes/profile/profile.component';
 import Search from './routes/search/search.component';
-import Footer from './components/footer/footer.component';
-//const BACK_URL = 'http://localhost:5000/'
+import Details from './routes/details/details.component';
+//import Footer from './components/footer/footer.component';
+//const BACK_URL = 'http://localhost:3001/'
 
 const App = () => {
 	
   return(
-	<div>
+	<div className='App'>
     <Routes>
 		<Route path='/' element={<NavBar />}>
 			<Route index element={<Home />} />
 			<Route path='search' element={<Search />} />
 			<Route path='profile' element={<Profile />} />
+			<Route path='detail/:id' element={<Details />}>
+
+			</Route>
 		</Route>
 	</Routes>
-	<Footer />
+	
 	</div>
   )
 

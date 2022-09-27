@@ -1,0 +1,19 @@
+.navbar-container { 
+
+    .nav-brand{
+        Color:red;
+        font-size: 2em;
+    }
+    .nav-brand:hover{
+        cursor: pointer;
+        color:white;
+    }
+
+    .nav-links-container {
+        width:100%;
+        justify-content: right;
+        .nav-links{
+            color:white;
+        }
+    }
+}

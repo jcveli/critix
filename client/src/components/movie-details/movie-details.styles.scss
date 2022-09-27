@@ -1,0 +1,44 @@
+.details-container {
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 25px;
+    padding: 2%;
+
+    box-sizing: border-box;
+
+    .poster-container, .info-container{
+        float:left;
+
+    }
+
+    .poster-container{
+       
+    }
+
+    .info-container {
+        padding: 1%;
+    
+
+        .info-table {
+            margin-top: 10px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    
+
+   
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .poster-container and .info-container{
+        width: 100%;
+        color:red($color: #000000)
+    }
+}
