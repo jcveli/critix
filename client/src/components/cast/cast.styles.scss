@@ -1,0 +1,12 @@
+.cast-container {
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12%;
+    overflow-x: auto;
+
+    .cast-card {
+        width:auto;
+        margin-right: 10px;
+        height:auto;
+    }
+}
