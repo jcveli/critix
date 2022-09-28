@@ -1,0 +1,17 @@
+
+.Search {
+    height: 100vh;
+
+    .search-box {
+        width:100%;
+        padding:1%;
+    }
+    .search-result-container {
+        margin-left: 1rem;
+        justify-content: left;
+        display:flex;
+        flex-wrap: wrap;
+        
+    }
+}
+

@@ -1,16 +1,31 @@
 .navbar-container { 
-
+    width:100%;
+    justify-content: center;
+    
     .nav-brand{
-        Color:red;
+        color:white;
         font-size: 2em;
+        font-family: 'Cairo Play', cursive;
     }
     .nav-brand:hover{
         cursor: pointer;
-        color:white;
+        color:red;
+    }
+
+    .search-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        .search-button {
+            margin-left: 10px;
+            background-color:rgba(211, 47, 47, 0.8) ;
+            
+        }
     }
 
     .nav-links-container {
-        width:100%;
+        width: 100%;
         justify-content: right;
         .nav-links{
             color:white;

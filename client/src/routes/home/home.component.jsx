@@ -3,6 +3,7 @@ import Movie from "../../components/movie/movie.component";
 import MovieCard from "../../components/movie-card/movie-card.component";
 import MovieCarousel from "../../components/movie-carousel/movie-carousel.component";
 
+import './home.styles.scss'
 
 const Home = () => { 
     const [movies, setMovies] = useState([]); 

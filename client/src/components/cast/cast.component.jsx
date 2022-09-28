@@ -1,5 +1,7 @@
 import {Card} from 'react-bootstrap';
 import { img_300 } from '../../config';
+import missingPoster from '../../assets/missing_image.png';
+
 import './cast.styles.scss';
 
 const Cast = ({actors}) => {
@@ -16,7 +18,9 @@ const Cast = ({actors}) => {
 					const {id,name,character, profile_path} = actor;
                    	return(
 						<Card className='cast-card' key={id}>
-							<Card.Img variant="top" src={`${img_300}${profile_path}`} />
+							<Card.Img 
+							className='cast-image' 
+							variant="top" src={profile_path ? `${img_300}${profile_path}` : `${missingPoster}`} />
 							<Card.Body>
 								<Card.Title>{name}</Card.Title>
 								<footer>

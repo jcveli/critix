@@ -22,7 +22,7 @@ const App = () => {
 			</Route>
 		</Route>
 	</Routes>
-	
+
 	</div>
   )
 

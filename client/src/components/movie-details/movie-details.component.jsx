@@ -1,4 +1,5 @@
 import { img_300 } from '../../config';
+import missingPoster from '../../assets/missing_image.png';
 import './movie-details.styles.scss';
 
 const MovieDetails = ({details}) => { 
@@ -10,7 +11,7 @@ const MovieDetails = ({details}) => {
     return(
         <div className='details-container'>
             <div className='poster-container'>
-                <img src={poster_path ? `${img_300}${poster_path}` : ''} alt='movie_poster'/>
+                <img src={poster_path ? `${img_300}${poster_path}` : `${missingPoster}`} alt='movie_poster'/>
                 <p>Can watch here:</p>
             </div>
             <div className='info-container'>
