@@ -1,7 +1,6 @@
 .App {
-    background-color: #2A2726;
+    background-color: rgba(31, 31, 53, 0.998);
     text-align: center;
     color: white;
-    overflow: auto;
     font-family: 'Noto Sans', sans-serif;
 }

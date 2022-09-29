@@ -1,0 +1,14 @@
+.review-container { 
+    width: 100%;
+    background-color: rgba(28, 28, 42, 0.998);
+    border-radius: 25px;
+    justify-content: space-around;
+    padding: 3%;
+    .review-body-input {
+        color:white;
+    }
+
+    .submit-button {
+        margin-top: 10px;
+    }
+}

@@ -36,7 +36,7 @@ const MovieDetails = ({details}) => {
                         }
                 </div>
 
-                <p><b>Directed By: </b></p>
+                
             </div>
         </div>
     )

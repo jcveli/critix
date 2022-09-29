@@ -1,14 +1,13 @@
 .cast-container {
-    display:grid;
+    display:flex;
     grid-auto-flow: column;
     gap: var(--size-3);
     grid-auto-columns: 15%;
-    overflow-x: auto;
-    
+    overflow-x: scroll;
+
     .cast-card {
         text-align: center;
-        margin-top: 10px;
-        width: 10rem;
+        margin: 10px;
         color: black;
 
         .cast-image{
