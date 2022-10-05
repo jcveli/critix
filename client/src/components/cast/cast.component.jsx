@@ -21,6 +21,7 @@ const Cast = ({actors}) => {
 						<CardMedia 
 							component="img"
 							image={profile_path ? `${img_300}${profile_path}` : `${missingPoster}`}
+							alt='actor'
 							className='cast-image'
 						/>
 						<CardContent>

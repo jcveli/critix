@@ -6,6 +6,7 @@ import Footer from '../footer/footer.component';
 import critixIcon from "../../assets/critix_icon.png";
 
 import './navbar.styles.scss'
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -13,15 +14,15 @@ const NavBar = () => {
     return (
      
         <Fragment>
-            	<Navbar collapseOnSelect expand='lg'>            
-                	<Container fluid className="navbar-container">
+            	<Navbar collapseOnSelect className="navbar-container" color =''expand='lg'>            
+                	<Container fluid>
 						<Navbar.Brand className='nav-brand' href="/">
 							<img 
 								src={critixIcon}
 								width="40"
 								height="40"
 								className="d-inline-block align-top"
-								alt="critix brand image"
+								alt="critix brand"
 							/>
 							Critix
 						</Navbar.Brand>
@@ -29,8 +30,8 @@ const NavBar = () => {
 						<Navbar.Collapse  id="responsive-navbar-nav">
 						
 						<Nav className="nav-links-container">
-							<Nav.Link className="nav-links" href="/search">Search</Nav.Link>
-							<Nav.Link className="nav-links" href="/profile">Profile</Nav.Link>
+							<NavLink className="nav-links" to="/search">Search</NavLink>
+							<NavLink className="nav-links" to="/profile">Profile</NavLink>
 						</Nav>
 					
 						</Navbar.Collapse>
