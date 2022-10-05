@@ -1,3 +1,5 @@
+@use '../../utils/global';
+
 .home-container {
   min-height: 100vh;
   text-align: left;
@@ -5,10 +7,11 @@
   flex-direction: column;
   padding:25px;
 
-  .trend-container{
+  .trend-container, .now-container{
+    margin-top: 15px;
     padding: 1%;
-    border-radius: 25px;
+    border-radius: 15px;
     width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: global.$container-shadow;
   }
 }

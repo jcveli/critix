@@ -1,8 +1,17 @@
+@use '../../utils/global.scss';
+
 .Details {
-    height:100vh auto;
+    min-height: 100vh;
     padding: 1%;
     text-align: left;
     width: 100%;
+    box-shadow: global.$container-shadow;
 
-    
+    .cast-section, .review-section { 
+        margin-top: 15px;
+        padding: 1%;
+        border-radius: 15px;
+        width: 100%;
+        box-shadow: global.$container-shadow;
+    }
 }

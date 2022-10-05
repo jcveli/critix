@@ -51,11 +51,15 @@ const Details = () => {
     return (
         <div className='Details'>
            	<MovieDetails key={details.id} details={details}/>
-			<h2>Cast</h2>
-			<Cast actors={cast} />
+			<div className='cast-section'>
+                <h2>Cast</h2>
+			    <Cast actors={cast} />
+            </div>
 			
-			<h2>Reviews</h2>
-            <Review />
+            <div className='review-section'>
+                <h2>Reviews</h2>
+                <Review />
+            </div>
         </div>
     )
 

@@ -1,3 +1,5 @@
+@use '../../utils/global';
+
 .details-container {
     background-color: rgba($color: #000000, $alpha: 0.2);
     border-radius: 25px;
@@ -25,6 +27,7 @@
 
         .overview-container{
             text-align: left;
+            max-width: 100%;
         }
 
         .info-table {
