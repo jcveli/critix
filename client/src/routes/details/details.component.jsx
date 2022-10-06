@@ -41,7 +41,6 @@ const Details = () => {
 
     useEffect(() => {
         getMovieDetails();
-
 		getCast();
     },[]);
 

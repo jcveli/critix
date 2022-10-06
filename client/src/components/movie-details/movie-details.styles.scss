@@ -1,22 +1,21 @@
 @use '../../utils/global';
 
 .details-container {
-    background-color: rgba($color: #000000, $alpha: 0.2);
     border-radius: 25px;
     padding: 2%;
     display:flex;
     flex-direction: row;
     flex-flow:wrap;
-   
- 
+    color:white;
+    box-shadow: global.$container-shadow;
+    box-shadow: inset 0 0 0 500px rgba(26, 26, 26, 0.478);
+
+
     .poster-container{ 
         display:block;
         margin: 20px auto 20px;
     
-        img{
-            border-radius: 20px;
-            
-        }
+      
     }
     
 
@@ -27,7 +26,7 @@
 
         .overview-container{
             text-align: left;
-            max-width: 100%;
+            width:clamp(400px, 70%, 100%);
         }
 
         .info-table {

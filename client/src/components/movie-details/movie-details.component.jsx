@@ -1,15 +1,15 @@
-import { img_300 } from '../../config';
+import { img_300, img_original} from '../../config';
 import missingPoster from '../../assets/missing_image.png';
 import './movie-details.styles.scss';
 
 const MovieDetails = ({details}) => { 
     //console.log(details)
-    const {title, tagline, overview, release_date, runtime, poster_path, genres, revenue} = details; 
+    const {title, tagline, overview, release_date, runtime, poster_path, backdrop_path, genres, revenue} = details; 
     let newRevenue = revenue?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
     
     return(
-        <div className='details-container'>
+        <div className='details-container' style={{backgroundImage: `url(${img_original}${backdrop_path})`}}>
             <div className='poster-container'>
                 <img src={poster_path ? `${img_300}${poster_path}` : `${missingPoster}`} alt='movie_poster'/>
                 <p>Can watch here:</p>
