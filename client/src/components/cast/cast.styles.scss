@@ -1,9 +1,13 @@
+
+
 .cast-container {
     display:flex;
     grid-auto-flow: column;
     gap: var(--size-3);
     grid-auto-columns: 15%;
     overflow-x: scroll;
+
+
 
     .cast-card {
         text-align: center;
@@ -12,4 +16,19 @@
 
        
     }
+}
+
+
+.cast-container::-webkit-scrollbar{
+    width: 12px;
+}
+
+.cast-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.397); 
+    border-radius: 10px;
+}
+
+.cast-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 33px rgba(0, 0, 0, 0.5); 
 }

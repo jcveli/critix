@@ -16,7 +16,7 @@ const NavBar = () => {
         <Fragment>
             	<Navbar collapseOnSelect className="navbar-container" color =''expand='lg'>            
                 	<Container fluid>
-						<Navbar.Brand className='nav-brand' href="/">
+						<Navbar.Brand className='nav-brand'>
 							<img 
 								src={critixIcon}
 								width="40"
@@ -24,7 +24,7 @@ const NavBar = () => {
 								className="d-inline-block align-top"
 								alt="critix brand"
 							/>
-							Critix
+							<NavLink className='brand-link' to='/'>Critix</NavLink>
 						</Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse  id="responsive-navbar-nav">
