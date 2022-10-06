@@ -3,17 +3,18 @@ import Movie from "../../components/movie/movie.component";
 import MovieCarousel from "../../components/movie-carousel/movie-carousel.component";
 
 import './home.styles.scss'
-import { fetchLatestMovies, fetchTrendingMovies } from "../../utils/APIConnection";
+import { fetchMovies } from "../../utils/APIConnection";
 
 const Home = () => { 
+    const API_KEY = process.env.React_App_Tmdb_Key;
     const [trendingMovies, setTrendMovies] = useState([]); 
     const [popularMovies, setPopularMovies] = useState([]); 
     const [nowMovies, setNowMovies] = useState([]);
 
 
-    const fetchMovies = async () => { 
-        const trendData = await fetchTrendingMovies();
-        const latestMovieData = await fetchLatestMovies(); 
+    const getMovies = async () => { 
+        const trendData = await fetchMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}&include_adult=false&region=US`);
+        const latestMovieData = await fetchMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&include_adult=false&language=en-US&page=1&region=US`); 
         
         
         setTrendMovies(trendData);
@@ -21,10 +22,10 @@ const Home = () => {
     }
 
     useEffect( () => {
-        fetchMovies(); 
+        getMovies(); 
     }, [])
 
-    //console.log(nowMovies)
+
     return( 
         <div className="home-container">
             
