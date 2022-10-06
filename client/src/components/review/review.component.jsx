@@ -14,7 +14,7 @@ const Review = () => {
     return(
         <div className='review-container'>
             <Form action="" method="POST" noValidate className='form-container'>
-                <Rating className='star-rating' size='large' named="10-star-rating" defaultValue={5} max={10} />
+                <Rating className='star-rating' size='large' named="10-star-rating"  max={10} />
 
                 <div className='text-field'>
                     <TextField
