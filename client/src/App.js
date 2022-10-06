@@ -18,7 +18,6 @@ const App = () => {
 			<Route path='search' element={<Search />} />
 			<Route path='profile' element={<Profile />} />
 			<Route path='detail/:id' element={<Details />}>
-
 			</Route>
 		</Route>
 	</Routes>
