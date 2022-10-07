@@ -31,7 +31,7 @@ const NavBar = () => {
 						
 						<Nav className="nav-links-container">
 							<NavLink className="nav-links" to="/search">Search</NavLink>
-							<NavLink className="nav-links" to="/profile">Profile</NavLink>
+							{/*<NavLink className="nav-links" to="/profile">Profile</NavLink>*/}
 						</Nav>
 					
 						</Navbar.Collapse>
