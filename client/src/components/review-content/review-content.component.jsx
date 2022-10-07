@@ -12,22 +12,26 @@ const ReviewContent = ({review}) => {
     let createDate = DateFormat(created_at);
     let updateDate = DateFormat(updated_at);
     
-    
+    let userImage = avatar_path;
+    const gravatarUrl = `https://www.gravatar.com/avatar/`;
 
 
     // console.log(createTime);
 
-    let userImage = avatar_path;
-    const gravatarUrl = `https://www.gravatar.com/avatar/`;
-
-   
+    if(userImage !== null){
+        userImage = userImage.slice(1);
+        if(!userImage.includes('https://')){
+            userImage = gravatarUrl.concat('', userImage);
+        }
+    }
+    
 
 
 
 
 
     if(rating === null) {
-        rate = <span className='user-rating'>Rating: N/A</span>
+        rate = <span className='user-rating'>Rating Not Available</span>
     }else{
         rate = <span className='user-rating'><Rating className='star-rating' defaultValue={rating} max={10} disabled/> <span className='text-rating'>{rating}/10</span></span>
     }
@@ -35,7 +39,7 @@ const ReviewContent = ({review}) => {
     return(
         <div className='review-contents'>
             <div className='author-details'>
-                <Avatar src='https://www.w3schools.com/howto/img_avatar.png'/>
+                <Avatar src={userImage} sx={{minWidth:100, minHeight: 100}}/>
                 <p><b>{author}</b></p>
                 <p>Posted at {createDate}</p>
                 <p>Edited at {updateDate}</p>
