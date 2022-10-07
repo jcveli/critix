@@ -1,8 +1,9 @@
 .carousel-container { 
     display:flex;
+    justify-content: center;
 
     .carousel {
-        width:100%;
+        width:60%;
         
 
         .carousel-control-next-icon, .carousel-control-prev-icon{

@@ -1,34 +1,11 @@
+@use '../../utils/global.scss';
 .review-container { 
     width: 100%;
     border-radius: 25px;
     padding: 1%;
-
-    .form-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;        
-        .star-rating{
-            align-items: center;
-            margin-bottom: 15px;
-            width: 50%;
-        }
-
-        .review-body-input {
-            color:black;
-        }
     
-        .submit-button {
-            margin-top: 10px;
-        }
+    .reviews-list-container{
+        margin-top: 10px;
 
-
-        .text-field{ 
-            flex-direction: column;
-            width: 100%;
-            .review-body-input {
-                color:black;
-            }
-        
-        }
     }
 }

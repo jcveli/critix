@@ -22,7 +22,7 @@ const MovieCard = ({movie}) => {
 					{title}
 				</Typography>
 				<Typography className="rating">
-					Rating:<br />{Math.round(vote_average * 10) / 10}/10
+					<span>Rating</span>{Math.round(vote_average * 10) / 10}/10
 				</Typography>
 			</CardContent>
 		</Card>

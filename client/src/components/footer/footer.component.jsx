@@ -5,10 +5,12 @@ import './footer.styles.scss'
 const Footer = () => { 
     return (
         <div className='footer-container'>
-            <span className='credit'>Created by Jerald Velicaria</span>
-            <span className='db-logo'>Powered By <img src={tmdbLogo} alt='The Movie Database Logo' />
-            
-            </span>
+            <div className='footer-content'>
+                <span className='credit'>Created by Jerald Velicaria</span>
+                <span className='db-logo'>
+                    <img src={tmdbLogo} alt='The Movie Database Logo' />
+                </span>
+            </div>
         </div>
     )
 }

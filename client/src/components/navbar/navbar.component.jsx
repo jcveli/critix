@@ -38,6 +38,7 @@ const NavBar = () => {
                 	</Container>
             	</Navbar>
           <Outlet />
+		  <Footer />
         </Fragment>
         
     )

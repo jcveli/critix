@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const CONNECTION_URL = 'mongodb+srv://critixMaster:d4CHNj6NHaOFlybb@cluster0.0lulxnr.mongodb.net/?retryWrites=true&w=majority'
-const PORT = process.env.PORT || 5000; 
+const PORT = process.env.PORT || 3001; 
 
 mongoose.connect(CONNECTION_URL, {
     useNewUrlParser: true, 
@@ -32,6 +32,6 @@ app.use('/', movieRoutes);
 // })
 
 
-app.listen(5000, () => {
-    console.log("Listening at port 5000")
+app.listen(3001, () => {
+    console.log("Listening at port 3001")
 })
