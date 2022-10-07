@@ -1,18 +1,20 @@
 .carousel-container { 
     display:flex;
     justify-content: center;
-    padding:2%;
 
     .carousel {
-        width:50rem;
+        width:60%;
         
+
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            border: 320px white;
+        }
     }
 
     img {
         width:100%;
-        border-radius: 25px;
         object-fit:cover;
-    
+        cursor: pointer;
 
     }
     

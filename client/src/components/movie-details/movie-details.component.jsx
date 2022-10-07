@@ -6,13 +6,13 @@ const MovieDetails = ({details}) => {
     //console.log(details)
     const {title, tagline, overview, release_date, runtime, poster_path, backdrop_path, genres, revenue} = details; 
     let newRevenue = revenue?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
 
     
     return(
         <div className='details-container' style={{backgroundImage: `url(${img_original}${backdrop_path})`}}>
             <div className='poster-container'>
                 <img src={poster_path ? `${img_300}${poster_path}` : `${missingPoster}`} alt='movie_poster'/>
-                <p>Can watch here:</p>
             </div>
             <div className='info-container'>
                 <h1>{title}</h1>

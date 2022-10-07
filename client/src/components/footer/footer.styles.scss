@@ -1,30 +1,27 @@
 .footer-container {
-    position: fixed;
-    bottom: 0; 
-    left: 0; 
-    right: 0;
     width: 100%;
     color:white;
-    height: 45px;
-    background-color: #13172e;
+    height: 70px;
+    background-color: rgb(41, 41, 41);
+    margin-top: auto;
 
+    .footer-content{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .credit{
+            margin-left: 15px;
+        }
 
-    .credit, db-logo {
-        margin-top: 10px;
-    }
-
-    .credit {
-        float:left;
-
-    }
-
-    .db-logo {
-        float:right;
-
-
-        img{
-            width: 50px;
-            height: 50px;
+        .db-logo{
+            margin-right: 15px;
+            margin-top: 5px;
+            img{
+                width: 50px;
+                height: 50px;
+            }
         }
     }
+    
 }
