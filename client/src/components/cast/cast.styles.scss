@@ -6,19 +6,11 @@
     gap: var(--size-3);
     grid-auto-columns: 15%;
     overflow-x: scroll;
-
-
-
-    .cast-card {
-        text-align: center;
-        margin: 10px;
-        color: black;
-
-       
-    }
 }
 
 
+
+//custom scrollbar 
 .cast-container::-webkit-scrollbar{
     width: 12px;
 }

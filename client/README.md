@@ -6,7 +6,7 @@ Critix is a full-stack web application built with JavaScript using the React fra
 ## Technologies
 - Frontend
   - JavaScript
-  - CSS
+  - SASS
   - React
   - BootStrap
   - Material UI
@@ -19,4 +19,11 @@ Critix is a full-stack web application built with JavaScript using the React fra
   - themoviedb.org API 
   
 
-## 
+## Lessons Learned
+- Need to keep in mind of the number images that is being fetched in the main menu; high
+  data usage from the carousel because of poster size & quality. 
+    - Why visit a site if it might take half of the user's data limit...
+- Skeleton animations for data loading is a good idea for UI design purposes to look 
+  a bit nicer while things are loading. 
+- Implementing an environment file to keep the API key for databases
+  - **BAD IDEA ** to put the API key in the fetch URL
