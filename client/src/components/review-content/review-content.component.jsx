@@ -1,9 +1,12 @@
-import { Avatar, Rating } from '@mui/material';
+import { Avatar, Rating} from '@mui/material';
+import DataSkeleton from '../data-skeleton/data-skeleton.component';
+import { useEffect, useState } from 'react';
 import { DateFormat } from '../../utils/DateFormat';
 
 import './review-content.styles.scss';
 
 const ReviewContent = ({review}) => { 
+    const [loading, setLoading] = useState(true);
     const {author, content, created_at, updated_at} = review; 
     const {avatar_path, rating} = review.author_details; 
     let rate = <span className='user-rating'></span>;
@@ -25,7 +28,11 @@ const ReviewContent = ({review}) => {
         }
     }
     
-
+    useEffect( () => { 
+        setTimeout(() =>{
+            setLoading(false);
+        }, 3000)
+    },[])
 
 
 
@@ -38,16 +45,39 @@ const ReviewContent = ({review}) => {
 
     return(
         <div className='review-contents'>
+           {loading ? (
+                <div className='author-details'>
+                    <DataSkeleton variant='circular' width={100} height={100} />
+                    <DataSkeleton width='80%' />
+                    <DataSkeleton width='80%' />
+                    <DataSkeleton width='80%' />
+                </div>
+           ):(
             <div className='author-details'>
                 <Avatar src={userImage} sx={{minWidth:100, minHeight: 100}}/>
                 <p><b>{author}</b></p>
                 <p>Posted at {createDate}</p>
                 <p>Edited at {updateDate}</p>
             </div>
-            <div className='review-details'>
-                {rate}
-                <p className='review-text'>{content}</p>
-            </div>
+           )}
+            {loading ? (
+                <div className='review-details'>
+                <DataSkeleton width='35%' height={30} >
+                    {rate}
+                </DataSkeleton>
+                    <div className='review-text'>
+                        <DataSkeleton width='100%' />
+                        <DataSkeleton width='80%' />
+                        <DataSkeleton width='60%' />
+                        <DataSkeleton width='40%' /> 
+                    </div>
+                </div>
+            ):(
+                <div className='review-details'>
+                    <div>{rate}</div>
+                    <div className='review-text'>{content}</div>
+                </div>
+            )}
         </div>
     )
 }

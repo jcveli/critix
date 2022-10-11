@@ -26,7 +26,7 @@
 
         .overview-container{
             text-align: left;
-            width:clamp(400px, 70%, 100%);
+            width:clamp(300px, 60%, 100%);
         }
 
         .info-table {
@@ -38,14 +38,11 @@
 
         .genre-container{
             text-align: left;
-            .genre-tag{     
-                margin-right: 10px;
-            }
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap:10px;
         }
     }
-
-    
-
-   
 }
 
