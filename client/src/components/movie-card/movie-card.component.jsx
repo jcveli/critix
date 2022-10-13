@@ -1,10 +1,12 @@
 import {useState, useEffect } from 'react'; 
 import { useNavigate} from "react-router-dom";
-import { Card, CardContent, CardMedia, Typography, Icon } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography} from "@mui/material";
 import DataSkeleton from '../data-skeleton/data-skeleton.component';
-import './movie-card.styles.scss'
+
+import './movie-card.styles.scss';
 import { img_300 } from '../../config';
 import missingPoster from '../../assets/missing_image.png';
+import StarIcon from '@mui/icons-material/Star';
 
 const MovieCard = ({movie}) => {
 	const [loading, setLoading] = useState(true); 
@@ -54,9 +56,10 @@ const MovieCard = ({movie}) => {
 					</DataSkeleton>
 				): (
 					<Typography className="rating">
-						<span>Rating</span>{Math.round(vote_average * 10) / 10}/10
+							Rating
+							<span className='rate-result'><StarIcon/>{Math.round(vote_average * 10) / 10}/10</span>
 					</Typography>
-				)}
+					)} 
 			</CardContent>
 		</Card>
     )

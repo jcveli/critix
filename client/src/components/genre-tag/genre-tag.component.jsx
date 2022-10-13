@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Skeleton } from '@mui/material';
+import DataSkeleton from '../data-skeleton/data-skeleton.component';
 import './genre-tag.component.scss';
 
 const GenreTag = ({genre}) => {
@@ -15,9 +15,9 @@ const GenreTag = ({genre}) => {
     return(
        <div>
         {loading ? (
-            <Skeleton sx={{ bgcolor:'grey.900'}} animation='wave'>
+            <DataSkeleton>
                 <span className='genre-tag'>{name}</span>
-            </Skeleton>
+            </DataSkeleton>
         ):(
             <span className='genre-tag'>{name}</span>
         )
