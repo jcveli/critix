@@ -15,7 +15,7 @@ const Review = ({movieId}) => {
             setReviews(reviewData); 
         }
         getReviewData(movieId);
-    },[]);
+    },[movieId]);
 
     return(
         <div className='review-container'>

@@ -19,13 +19,14 @@ const MovieCard = ({movie}) => {
         setTimeout(() => {
             setLoading(false)
         }, 3000)
-    }, [])
+    }, [id])
 
 
 
 	
   	const onCardClick = () => { 
 		navigate(`/detail/${id}`)
+		
 	}
     
     return(
