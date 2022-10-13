@@ -33,14 +33,9 @@ const ReviewContent = ({review}) => {
             userImage = gravatarUrl.concat('', userImage);
         }
     }
-    var contentToHTML = function(content) {
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(content, 'text/html');
-        return doc.body;
-    }
+
     
 
-    let contentHTML = contentToHTML(content);
     
     useEffect( () => { 
         setTimeout(() =>{
