@@ -4,7 +4,11 @@ import { useEffect, useState } from 'react';
 import { DateFormat } from '../../utils/DateFormat';
 
 import './review-content.styles.scss';
-
+/**
+ * 
+ * @param review prop
+ * @returns 
+ */
 const ReviewContent = ({review}) => { 
     const [loading, setLoading] = useState(true);
     const {author, content, created_at, updated_at} = review; 
@@ -18,15 +22,25 @@ const ReviewContent = ({review}) => {
     let userImage = avatar_path;
     const gravatarUrl = `https://www.gravatar.com/avatar/`;
 
-
-    // console.log(createTime);
-
+    /*
+    *  removes beginning '/' from user_image URL
+    *  If URL does not include 'https', concat
+    *  Returns a URL it can fetch properly  
+    */
     if(userImage !== null){
         userImage = userImage.slice(1);
         if(!userImage.includes('https://')){
             userImage = gravatarUrl.concat('', userImage);
         }
     }
+    var contentToHTML = function(content) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(content, 'text/html');
+        return doc.body;
+    }
+    
+
+    let contentHTML = contentToHTML(content);
     
     useEffect( () => { 
         setTimeout(() =>{
@@ -35,6 +49,7 @@ const ReviewContent = ({review}) => {
     },[])
 
 
+    
 
 
     if(rating === null) {
@@ -74,7 +89,7 @@ const ReviewContent = ({review}) => {
                 </div>
             ):(
                 <div className='review-details'>
-                    <div>{rate}</div>
+                    <div className='user-rating'>{rate}</div>
                     <div className='review-text'>{content}</div>
                 </div>
             )}
